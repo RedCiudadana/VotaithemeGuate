@@ -1,0 +1,1 @@
+Parabéns! {{candidate.name}} se comprometeu com uma proposta que você apoia!

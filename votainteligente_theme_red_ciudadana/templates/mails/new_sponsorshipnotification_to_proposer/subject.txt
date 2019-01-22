@@ -1,0 +1,1 @@
+Parabéns! {{like.user}} acaba de apoiar sua proposta {{like.proposal.title}}
