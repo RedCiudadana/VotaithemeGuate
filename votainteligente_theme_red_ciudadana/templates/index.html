@@ -7,58 +7,38 @@
 {% load cache %}
 
 {% block everything %}
-
-<section id="you-proposal">
-    <div class="container">
-        <div class="col-md-4">
-            <a href="{% url 'medianaranja2:index' %}">  
-              <img src="{% static 'img/logotipo_rioporinteiro_para_fundo_de_cor.svg' %}" class="img-responsive logo_landing" alt="">
-                
-            </a>
-        </div>
-        <div class="col-md-4">
-          <a href="{% url 'medianaranja2:index' %}">
-            <h2 class="text-center">La dani es una seca</h2>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="{% url 'medianaranja2:index' %}">  
-            <img src="{% static 'img/logo_tem_compromiso.svg' %}" class="img-responsive logo_landing" alt="TemCompromiso">
-          </a>
-        </div>
-    </div>
-
-
-</section>
-<section class='green-up-section'></section>
-<section id="call-to-action">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <p>Encontre o ponto em comum entre você e sua candidatura <a href="{% url 'medianaranja2:index' %}" class="btn btn-blue" onclick="ga('send', 'event', 'home-invitacion-ong', 'click')">#TemCompromisso</a></p>
-        </div>
-      </div>
-    </div>
-</section>
-<section class='green-bottom-section'></section>
-
-{% cache 600 featured_p %}
+{% include "index_candidate_important.html" %}
 {% if featured_proposals.count %}
 <section id="highlighted-proposals">
   <div class="container">
-    <h3 class="text-center">Temos <a href="{% url 'popular_proposals:home' %}" onclick="ga('send', 'event', 'counter-propuestas-ciudadanas', 'click')"><span class="counter-number">{{total_proposals}}</span></a> propostas cidadãs</h3>
-    <p class="bajada text-center">{% trans "Te invitamos a filtrar y encontrar propuestas ciudadanas en las siguientes áreas" %}</p>
+    <h3 class="text-center">Tenemos <a href="{% url 'popular_proposals:home' %}" onclick="ga('send', 'event', 'counter-propuestas-ciudadanas', 'click')"><span class="counter-number">{{total_proposals}}</span></a> propuestas ciudadanas</h3>
+    <p class="bajada text-center">Te invitamos a filtrar y encontrar propuestas ciudadanas en las siguientes áreas</p>
     {% include 'popular_proposal/_filter_tag_form.html' %}
     {% include 'popular_proposal/_lista_propuestas.html' with popular_proposals=featured_proposals form=Nil hide_proposal_list_header=True hidden_search=True %}
     <div class="col-md-6 col-md-offset-3">
-      <p class="text-center"><a href="{% url 'popular_proposals:home' %}" class="btn btn-success">Todas as propostas</a></p>
+      <p class="text-center"><a href="{% url 'popular_proposals:home' %}" class="btn btn-success">Ver todas las propuestas</a></p>
     </div>
   </div>
 </section>
 {% endif %}
-{% endcache %}
+<section id="you-proposal">
+  <h2 class="text-center">Revisa el libro que le entregamos a los candidatos</h2><p class="text-center">
+    <a href="{% static 'material-ciudadano/propuestas-ciudadanas.pdf' %}" class="btn btn-dark">Aquí</a></p>
+</section>
+
+
 {% cache 600 organization_logos %}
 {% organization_logos %}
 {% endcache %}
+<section id="you-org" class="grey-one">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>¿Eres una organización y quieres estar aquí? <a href="{% url 'login_users' %}" class="btn btn-blue" onclick="ga('send', 'event', 'home-invitacion-ong', 'click')">Ingresa</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 {% endblock everything %}

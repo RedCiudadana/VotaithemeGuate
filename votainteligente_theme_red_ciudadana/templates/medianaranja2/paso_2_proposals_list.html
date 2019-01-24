@@ -5,15 +5,17 @@
 {% load votainteligente_extras %}
 {% load cache %}
 {% load bootstrap3 %}
-{% block body_class %}navbar_invisible{% endblock body_class %}
+
 {% block questions %}
- 
+  <p>{% trans "Estas medidas son propuestas que organizaciones, ciudadanos y ciudadanas han hecho en Vota Inteligente. Acá te mostramos una selección con la que se han comprometido ambas candidaturas para ver con cuáles eres más compatible." %}</p>
+
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ wizard.form.media }}
     {{ wizard.management_form }}
-    <label>
-    Se você pudesse priorizar temas que diminuíssem as desigualdades e aumentassem as oportunidades da metrópole do Rio, quais seriam? (Escolha apenas {{config.MEDIA_NARANJA_MAX_SELECT_PROPOSALS}} propostas)</label>
+    <label>{% blocktrans with max_proposals_in_12_naranja=config.MEDIA_NARANJA_MAX_SELECT_PROPOSALS %}
+      Si fueras presidenta, presidente o congresista, ¿Cuáles serían tus primeras {{max_proposals_in_12_naranja}} medidas o prioridades?
+    {% endblocktrans %}</label>
 
     {% for choice_id, choice_label in wizard.form.proposals.field.choices %}
     <div class="pregunta naranja-medida">
@@ -30,9 +32,9 @@
 
 
     {% if wizard.steps.prev %}
-    <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}" class="btn btn-default pull-left" onclick="ga('send','event','anterior-paso-{{wizard.steps.step1}}-media-naranja','click')">Enviar</button>
+    <button name="wizard_goto_step" type="submit" value="{{ wizard.steps.prev }}" class="btn btn-default pull-left" onclick="ga('send','event','anterior-paso-{{wizard.steps.step1}}-media-naranja','click')">{% trans "prev step" %}</button>
     {% endif %}
-    <input type="submit" name="submit" value="Enviar" class="btn btn-success pull-right" onclick="ga('send','event','siguiente-paso-{{wizard.steps.step1}}-media-naranja','click')" />
+    <input type="submit" name="submit" value="{% trans "Paso Siguiente" %}" class="btn btn-success pull-right" onclick="ga('send','event','siguiente-paso-{{wizard.steps.step1}}-media-naranja','click')" />
   </form>
   <script type="text/javascript">
   $(function(){

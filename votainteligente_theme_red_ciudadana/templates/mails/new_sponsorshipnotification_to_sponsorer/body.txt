@@ -1,17 +1,18 @@
-{% load votainteligente_extras %}Arrasou {{like.user}}!
+{% load votainteligente_extras %}Genias/os {{like.user}}!
 
-Lembramos que você acaba de apoiar a proposta "{{like.proposal.title}}"{% if like.message %} e que você enviou a seguinte mensagem:
+Les recordamos que acaban de apoyar la propuesta "{{like.proposal.title}}" y que les enviaste el
+siguiente mensaje:
 
 {{like.message}}
-{% else %}.{% endif %}
 
-{% if like.proposal.contact_details %}Queríamos dizer que {{like.proposal.user}} deixou os seguintes dados de contato público:
+{% if like.proposal.contact_details %}Te queríamos contar que {{like.proposal.user}} dejó los siguientes datos públicos de contacto:
 
-{{like.proposal.contact_details}}.
+Acá en la casa del jefe @damian-garrido.
 {% endif %}
-Agora você só precisa esperar que {{like.proposal.user}} entre em contato. Enquanto isso, você pode ver seu apoio a essa proposta
-refletido em seu perfil (https://{{site.domain}}{{like.user.organization_template.get_absolute_url}}) e na proposta (https://{{site.domain}}{{like.proposal.get_absolute_url}}).
+Ahora no te queda más que esperar que {{like.proposal.user}} se contacte contigo, mientras tanto puedes ver tu
+apoyo a esta propuesta reflejado en tu perfil (https://{{site.domain}}{{like.user.organization_template.get_absolute_url}}) y en
+la propuesta (https://{{site.domain}}{{like.proposal.get_absolute_url}}).
 
-Aeee! obrigado por estar com a gente!
+Te queremos mucho.
 
 {% mail_signature_txt %}

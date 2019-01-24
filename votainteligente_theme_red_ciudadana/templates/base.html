@@ -5,38 +5,34 @@
 {% load i18n %}
 {% load thumbnail %}
 {% load votainteligente_extras %}
-{% load cache %}
 <head>
     <meta charset="utf-8">
-    <title>Rio Por Inteiro{% block title %}: {{ config.WEBSITE_GENERAL_SETTINGS_HOME_TITLE }}{% endblock title %}</title>
-    {% cache 1000 landing_meta_1 %}
+    <title>{% trans "Vota Inteligente" %} {% block title %}- {{ config.WEBSITE_GENERAL_SETTINGS_HOME_TITLE }}{% endblock title %}</title>
     <meta name="author" content="{{ config.WEBSITE_METADATA_AUTHOR }}">
     <meta name="description" content="{% block description %}{{ config.WEBSITE_METADATA_DESCRIPTION }}{% endblock description %}">
     <meta name="keywords" content="{% block extrakeywords %}{% endblock extrakeywords %}{{ config.WEBSITE_METADATA_KEYWORD }}{% block keywords %}{% endblock keywords %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="google-site-verification" content="{{ config.WEBSITE_GA_GSITE_VERIFICATION }}">
-    {% endcache %}
     <!--for facebook fans-->
     {% block ogp %}
-    {% cache 1000 social_meta %}
     <meta property="og:title" content="{{ config.WEBSITE_OGP_TITLE }}">
     <meta property="og:type" content="{{ config.WEBSITE_OGP_TYPE }}">
     <meta property="og:url" content="https://{% url_domain %}">
-    <meta property="og:image" content="{% static 'img/logo_rpi_og.png' %}">
+    <meta property="og:image" content="https://{% url_domain %}{% static 'img/logo_vi_og.jpg' %}">
     <meta property="og:description" content="{{config.WEBSITE_TWITTER_TEXT}}">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@CasaFluminense">
-    <meta name="twitter:creator" content="@CasaFluminense">
+    <meta name="twitter:site" content="@ciudadanoi">
+    <meta name="twitter:creator" content="@ciudadanoi">
     <meta name="twitter:title" content="{{config.WEBSITE_TWITTER_HASHTAG}}">
     <meta name="twitter:description" content="{{config.WEBSITE_TWITTER_TEXT}}">
-    <meta name="twitter:image" content="{% static 'img/logo_rpi_og.png' %}">
-    <meta property="fb:app_id" content="{{ config.WEBSITE_OGP_APP_ID }}">
-    {% endcache %}
+    <meta name="twitter:image" content="https://{% url_domain %}{% static 'img/logo_vi_og.jpg' %}">
+
     {% endblock ogp %}
+    <meta property="fb:app_id" content="{{ config.WEBSITE_OGP_APP_ID }}">
     <!--eoff-->
-    <link rel="shortcut icon" sizes="196x196" href="{% static 'img/favicon-96x96.png' %}">
+    <link rel="shortcut icon" sizes="196x196" href="{% static 'img/votai-196.png' %}">
     <!-- Browser out of date -->
     <script>
     var $buoop = {vs:{i:10,f:-4,o:-4,s:8,c:-4},api:4};
@@ -51,7 +47,7 @@
     <!-- Latest compiled and minified CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/chosen/1.6.2/chosen.css" rel="stylesheet">
-    <link href="{% sass_src 'sass/main_rioporinteiro.scss' %}" rel="stylesheet" type="text/css" />
+    <link href="{% sass_src 'sass/main.scss' %}" rel="stylesheet" type="text/css" />
 
     <link href='//fonts.googleapis.com/css?family=Nunito+Sans:400,700' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
@@ -71,8 +67,7 @@
     {% block extra_css %}
     {% endblock extra_css %}
 </head>
-    <body class="{% block body_class %}navbar_visible{% endblock body_class %}">
-      {% cache 5000 FACEBOOK_INIT %}
+    <body class="navbar_visible">
       <script>
         window.fbAsyncInit = function() {
           FB.init({
@@ -83,6 +78,7 @@
           });
           FB.AppEvents.logPageView();
         };
+
         (function(d, s, id){
            var js, fjs = d.getElementsByTagName(s)[0];
            if (d.getElementById(id)) {return;}
@@ -91,12 +87,10 @@
            fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-jssdk'));
       </script>
-      {% endcache %}
-      {% block _everything %}
       <div>
-          {% block navbar %}
-          {% include '_navbar.html' %}
-          {% endblock navbar %}
+        {% block navbar %}
+        {% include '_navbar.html' %}
+        {% endblock navbar %}
         {% block everything %}
         <div class="{% block content_container %}container content_padding{% endblock content_container %}">
             {% block content %}
@@ -104,7 +98,6 @@
         </div>
         {% endblock everything %}
       </div>
-      {% endblock _everything %}
         {% include '_footer.html' %}
         <script src="{% static 'js/removeDiacritics.js' %}"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-expander/1.7.0/jquery.expander.min.js"></script>
@@ -136,13 +129,12 @@
             if( $(".chosen-select").length ) {
               $(".chosen-select").chosen();
             }
-            $('.email-prensa').attr('href','mailto:'+'rioxinteiro'+'@'+'cidadaniainteligente.org?'+'Subject=Rio Por Inteiro');
+            $('.email-prensa').attr('href','mailto:'+'vota-2017'+'@'+'ciudadanointeligente.org?'+'Subject=Votainteligente');
          })
         </script>
         {% block extra_scripts %}
         {% endblock extra_scripts %}
 
-          {% cache 5000 analytics_bottom %}
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -153,7 +145,6 @@
           {% block analytics %}{% endblock analytics %}
           ga('send', 'pageview');
         </script>
-          {% endcache %}
         <script src="//my.hellobar.com/3386a1a0ded6e97c66150a9239e12ec69909b59c.js" type="text/javascript" charset="utf-8" async="async"></script>
     </body>
 </html>

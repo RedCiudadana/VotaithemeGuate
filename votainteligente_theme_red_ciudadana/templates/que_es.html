@@ -1,45 +1,27 @@
 {% extends "base.html" %}
 {% load i18n %}
-{% load markdown_deux_tags %}
+
 {% block everything %}
 {% load staticfiles %}
 
 <div class="container">
 	<div>
-	  <h1>O que é a Rio por Inteiro?</h1>
+	  <h1>{% trans "¿Qué es Vota Inteligente?" %}</h1>
 	</div>
 </div>
 <section id="que-es">
   <div class="container">
 		<div class="col-md-6">
+			{% url 'encuentro_ciudadano' as encuentro_ciudadano_url %}
 
-{% markdown %}
-Rio Por Inteiro é um projeto desenvolvido pela [Cidadania Inteligente](https://cidadaniainteligente.org) e pela [Casa Fluminense](https://casafluminense.org.br/) que busca mudar a forma como as eleições são vivenciadas no estado do Rio de Janeiro. Queremos possibilitar mais participação popular nas eleições de 2018 para que sejam as cidadãs e os cidadãos protagonistas desse processo.
-
-No ambiente da plataforma é possível para qualquer pessoa, organização, coletivo ou grupo gerar suas próprias propostas com os temas que mais lhes preocupam ou inquietam. A partir disso, faremos com que estas demandas cheguem às candidaturas, que poderão se comprometer em cumpri-las no caso de serem eleitos/as.
-
-Uma vez publicadas, é possível conhecer e endossar as propostas através de um “APOIO”. Além disso, organizações que participam da plataforma podem apoiar propostas de outras pessoas ou organizações.
-
-O movimento Rio Por Inteiro incentiva que as propostas sejam construídas coletivamente. Para isso, criamos uma Metodologia do Encontro para que a criação das propostas seja um espaço de convivência e diálogo entre pessoas, amigos, vizinhos e comunidades. Toda a vizinhança, sindicatos, grêmios, coletivos e organizações de todo tipo estão convidados a fazer suas propostas e organizar encontros para debater em conjunto sobre  qual é a convivência metropolitana que queremos. ([Aqui](https://rioporinteiro.org.br/encontro_cidadao/) você pode encontrar informação de como fazer seu próprio encontro).
-
-As eleições são o momento em que se define o futuro das pessoas e quais serão as políticas públicas que irão atendê-las. É fundamental que toda a cidadania seja ouvida e opine nesse processo. O voto não é a única forma de participar, a partir do movimento Rio Por Inteiro podemos ir mais longe, criando propostas coletivas, compartilhando com sua rede e apoiando as proposta que mais gosta, para que juntos façamos sentir, mais forte do que nunca, a voz da cidadania nas eleições que são nossas.
-
-{% endmarkdown %}
-
-
-
-
-
-
-
-
-
-
+		<p>{% blocktrans %}
+			Vota Inteligente es un plataforma desarrollada por <b><a href="//www.ciudadanointeligente.org/" target="_blank" onclick="ga('send','event','que-es-ciudadanoi','click')">Ciudadano Inteligente</a></b> que busca cambiar la forma en que se viven las elecciones en Chile para que esta vez sean los ciudadanos y ciudadanas los que hagan sus propuestas a las candidaturas.</p><p>En la plataforma cualquier persona, organización, colectivo o grupo de personas pueden generar sus propias propuestas que aborden los temas que más les preocupan o inquietan. Desde Ciudadano Inteligente le haremos llegar las propuestas que se levanten a todas las candidaturas presidenciales y parlamentarias y éstas se podrán comprometer en la misma plataforma a llevarlas a cabo y cumplirlas en caso de resultar electas.</p><p>Una vez subidas en la página, cualquier persona puede conocer y apoyar las propuestas a través de un “APOYAR <i class="fa fa-heart" aria-hidden="true"></i>”. Además, las organizaciones no gubernamentales que participen de la plataforma pueden patrocinar propuestas de otras personas u organizaciones.</p><p>Desde Vota Inteligente promovemos que las propuestas sean construidas colectivamente. Para eso hemos creado una Metodología de Encuentro para que la creación de nuestras propuestas sea un espacio de convivencia y diálogo entre personas, amigos, vecinos y comunidades. Juntas de vecinos, clubes deportivos, sindicatos, gremios, colectivos y organizaciones de todo tipo están invitados a hacer sus propuestas y a organizar encuentros para debatir en conjunto acerca del país que la ciudadanía sueña. (<b><a href="{{encuentro_ciudadano_url}}" onclick="ga('send','event','que-es-encuentro','click')">Acá</a></b> puedes encontrar información de cómo hacer tu propio encuentro).</p><p>Las elecciones son el momento en que se define el futuro de nuestro país y es fundamental que toda la ciudadanía tenga un voz y opinión en este proceso. El voto no es la única forma de participar, desde Vota Inteligente puedes ir más allá creando tu propuesta, compartirla con tus amistades y apoyar las que más te gusten para que juntos hagamos sentir, más fuerte que nunca, la voz de la ciudadanía en estas elecciones que son nuestras. <b>#LaElecciónEsNuestra</b>
+		{% endblocktrans %}</p>
 		</div>
 		<div class="col-md-6">
 				<div class="line-space"></div>
 				<div class="line-space"></div>
-				<img src="{% static 'img/oque-e.jpg' %}" class="img-responsive">
+				<img src="{% static 'img/que-es.svg' %}" class="img-responsive">
 		</div>
   </div>
 	<div class="line-space"></div>

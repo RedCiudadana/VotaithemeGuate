@@ -1,12 +1,12 @@
-{% load votainteligente_extras %}Olá {{contact.candidate.name}},
+{% load votainteligente_extras %}Hola {{contact.candidate.name}},
 
-Queremos te contar que em {{proposal.area}} a proposta “{{proposal.title}}” já conta com o apoio de {{number}} cidadãs/ãos e acreditamos que pode ser de seu interesse incorpor-la em seu programa.
+Te queremos contar que en {{proposal.area}} la propuesta “{{proposal.title}}” ya cuenta con {{number}} ciudadanos apoyándola y creemos que puede ser de tu interés para incorporarla en tu programa.
 
-Para fazer isso, você deve clicar no link a seguir. Você também pode fazer comentários sobre
-como você vai se comprometer com a proposta. 
+Para hacerlo debes hacer click en el siguiente link y podrás además hacer comentarios sobre
+cómo te comprometerás.
 
-https://{{site.domain}}{{proposal.get_absolute_url}}
+https://votainteligente.cl{{proposal.get_absolute_url}}
 
-Atenciosamente,
+Saludos
 
 {% mail_signature_txt %}

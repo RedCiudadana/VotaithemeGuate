@@ -1,25 +1,22 @@
 {% load votainteligente_extras %}
-Olá
+Hola
 
-Estamos te escrevendo para convida-lx a participar da plataforma Rio por Inteiro: https://rioporinteiro.org.br, que busca aproximar as candidaturas da sociedade nas eleições de 2018!
+Te escribimos en tu calidad de jefe de campaña de {{contact.candidate.name}}, para invitarlos a participar de http://Votainteligente.cl, plataforma de la Fundación Ciudadano Inteligente que busca acercar a candidatas/os con la ciudadanía en estas próximas elecciones.
 
-A #RioporInteiro é uma iniciativa sem fins lucrativos, que recebe propostas cidadãs e da sociedade civil para as eleições estaduais do Rio de Janeiro de 2018. 
+http://Votainteligente.cl es una plataforma, SIN COSTO ASOCIADO, que recibe propuestas ciudadanas y de la sociedad civil en el marco de las elecciones presidenciales y parlamentarias de este año.
 
-Cada candidatura conta com um perfil básico, que pode ser acessado para divulgar informações sobre sua campanha e comprometer-se com as propostas publicamente na plataforma.
+Cada candidatura cuenta con un perfil básico, al que puede acceder para difundir información sobre su campaña y comprometerse con aquellas propuestas ciudadanas que le sean afines.
 
-Enviamos aos e-mails de todas/os as/os candidatas/os as informações para acessar a plataforma e completar seu perfil, mas queríamos facilitar sua participação, já te conferindo os dados para isso!
+Con fecha 3 de octubre enviamos a los correos de todos los candidatos y candidatas la información para acceder a la plataforma y completar su perfil, pero hemos querido facilitar su participación entregandote acceso a ti al perfil de tu candidatura. Si ya están participando de la plataforma, desde acá podrn seguir actualizando la información y comprometiéndose con propuestas.
 
-Se você já está participando da plataforma, a partir daqui você pode continuar atualizando as informações e se comprometendo com as propostas.
+¿Cómo entrar al perfil?
+Solo debes ingresar a {{login_url}} con el siguiente usuario y contraseña (puedes modificarla ingresando en el sitio).
 
-Como acessar o perfil?
+**Tu usuario es: {{contact.candidacy.user.username}}
+**Tu contraseña es: {{contact.initial_password}}
 
-Basta fazer login no https://rioporinteiro.org.br/candidatos/login com o seguinte nome de usuário e senha (você pode modificá-la entrando no site).
+Si quieres que utilicemos otra dirección de correo electrónico para comunicarnos contigo o con otra persona de tu comando encargada de estos temas, puedes responder a este mismo mail con su contacto y cualquier otra duda que tengas.
 
-**Seu usuário é: {{contact.candidacy.user.username}}
-**Sua senha é: {{contact.initial_password}}
-
-obs: Se você deseja que utilizemos outro e-mail para nos comunicarmos com você ou com outra pessoa responsável por esses temas, você poderá responder a este mesmo e-mail com o contato para modificação, além de dúvidas que possa ter ;)
-
-Junte-se à Rio por Inteiro!
+¡Súmate a VotaInteligente!
 
 {% mail_signature_txt %}

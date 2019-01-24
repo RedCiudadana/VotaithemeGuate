@@ -1,2 +1,1 @@
-Para: Organización que patrocina
-Cuando: cuando patrocina
+new_sponsorshipnotification_to_sponsorer

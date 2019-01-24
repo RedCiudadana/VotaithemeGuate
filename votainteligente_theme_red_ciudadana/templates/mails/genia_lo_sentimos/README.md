@@ -1,1 +1,1 @@
-Este mail llega cuando un candidato NO se compromete con una propuesta.
+genia_lo_sentimos

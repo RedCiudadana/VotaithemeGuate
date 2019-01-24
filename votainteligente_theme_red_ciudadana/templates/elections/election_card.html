@@ -6,13 +6,21 @@
   {% if election %}
   <div class="text-center">
   <h2>{{election.name}}</h2>
+  {% if election.area.get_containing_filterable_areas %}
+    <h4>{% trans "Comunas" %}</h4>
+      {% for comuna in election.area.get_containing_filterable_areas %}
+        {{comuna}}
+        {% if not forloop.last %}
+        ,
+        {% endif%}
+      {% endfor %}
+  {% endif %}
   </div>
   <div class="row">
     {% for candidate in election.candidates.all %}
     <div class="col-md-3">
       <div class="panel-heading text-center">
         {% if not candidate.commitments.exists %}
-        {% comment %}
         <div class="ribbon-wrapper-candidate">
           <div class="ribbon-candidate text-center">
             <a href="{{candidate.get_absolute_url}}">
@@ -20,7 +28,6 @@
             </a>
           </div>
         </div>
-        {% endcomment %}
         {% endif %}
         <a href="{{candidate.get_absolute_url}}">
           {% if candidate.image %}

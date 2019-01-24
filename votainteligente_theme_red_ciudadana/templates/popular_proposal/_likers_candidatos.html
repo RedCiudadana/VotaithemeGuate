@@ -8,8 +8,9 @@
 {% commiters_by_election_position proposal cargo as commitments %}
   {% if commitments.all %}
     <hr>
-    <label>
-      Candidaturas a {{cargo}} comprometidas com essa proposta em RioPorInteiro</label>
+    <label>{% blocktrans with cargo=cargo %}
+      Candidaturas a {{cargo}} comprometidas con esta propuesta en VotaInteligente
+    {% endblocktrans %}</label>
     <ul class="list-inline">
       {% for commitment in commitments.all %}
         <li>

@@ -1,8 +1,8 @@
-Opa **{{organization}}**!:
+Graaaaandeee **{{organization}}**:
 
-Você quer apoiar a proposta **{{proposal}}** de **{{proposer}}**, isso tem algumas implicações:
+Estás apoyando a **{{proposer}}** en su propuesta **{{proposal}}**, esto tiene algunas implicancias:
 
-* No momento de pressionar o botão abaixo, um email será enviado para **{{proposer}}**, que criou esta proposta. Nela, seus dados serão compartilhados para que possam continuar a ser coordenados.
-* No perfil da sua organização, parece que você está apoiando essa proposta.
-* Quando qualquer cidadão revisa essa proposta, eles podem ver que {{organization}} está apoiando a ela.
-* Você NÃO será capaz de tirar o suporte para esta proposta, a menos que você fale com a equipe do RioPorInteiro.
+* Al momento de apretar el botón que está abajo se le enviará un mail a **{{proposer}}**, quién creó esta propuesta. En el se compartirán sus datos para que se sigan coordinando.
+* En tu perfil de organización aparecerá que estás apoyando a esta propuesta.
+* Cuando cualquier ciudadano revise esta propuesta podrá ver que {{organization}} la está apoyando.
+* Tu NO podrás quitarle el apoyo a esta propuesta a menos que hables con el equipo de VotaInteligente.

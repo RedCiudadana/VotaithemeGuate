@@ -1,1 +1,1 @@
-Parabéns! {{candidate.name}} se comprometeu com uma proposta que você apoia!
+Felicitaciones! {{candidate.name}} Se ha comprometido con una propuesta que tu apoyas!

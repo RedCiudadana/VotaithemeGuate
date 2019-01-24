@@ -1,2 +1,1 @@
-Para: Creador de una propuesta
-Cuando: Una organización patrocina una propuesta.
+new_sponsorshipnotification_to_proposer
