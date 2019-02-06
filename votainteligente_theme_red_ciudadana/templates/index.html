@@ -7,8 +7,8 @@
 {% load cache %}
 
 {% block everything %}
-<img src="{% static 'img/slider-lg.png' %}" alt="">
-
+<img src="{% static 'img/slider-lg.png' %}" alt="Estas elecciones, ¡la ciudadanía propone!" width="100%" class="hidden-sm visible-md visible-lg">
+<img src="{% static 'img/slider-xs.png' %}" alt="Estas elecciones, ¡la ciudadanía propone!" width="100%" class="visible-xs visible-sm hidden-md hidden-lg">
 {% cache 600 organization_logos %}
 {% organization_logos %}
 {% endcache %}
