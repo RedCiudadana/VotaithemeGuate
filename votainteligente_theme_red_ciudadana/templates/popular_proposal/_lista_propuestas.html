@@ -30,13 +30,13 @@ $('[data-toggle="tooltip"]').tooltip();
 <div id="grid">
   {% if not hide_proposal_list_header %}
       {% if form.is_filled_search %}
-      <h3 class="text-center">{% blocktrans with proposals_count=popular_proposals|length %}
+      <h3 class="text-center proposals_count">{% blocktrans with proposals_count=popular_proposals|length %}
         Hay {{proposals_count}}
       {% endblocktrans %}
         {% if not tipo_propuestas %}{% trans "propuestas ciudadanas" %}{% else %}{{tipo_propuestas}}{% endif %}
          {% trans "con tus criterios de búsqueda seleccionados" %}</h3>
       {% else %}
-      <h3 class="text-center">{% blocktrans with proposals_count=popular_proposals|length %}
+      <h3 class="text-center proposals_count">{% blocktrans with proposals_count=popular_proposals|length %}
         Hay {{proposals_count}}
       {% endblocktrans %} {% if not tipo_propuestas %}{% trans "propuestas ciudadanas" %}{% else %}{{tipo_propuestas}}{% endif %}</h3>
       {% endif %}
