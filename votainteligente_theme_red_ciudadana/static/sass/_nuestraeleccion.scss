@@ -1,0 +1,128 @@
+// Nuestra Elección 2019
+
+#proposalFilterForm {
+  .control-label {
+    color: white !important;
+  }
+}
+
+
+.badge {
+  background-color: #F8AE42;
+}
+
+/*RED CIUDADANA THEME*/
+
+.navbar-inverse {
+  border-bottom: 0;
+}
+
+/*Dont uppercase*/
+h1, h2, h3, h4, h5, h6, .badge, label.control-label {
+  text-transform: none !important;
+  letter-spacing: 0;
+}
+
+.navbar {
+  height: 80px;
+}
+
+.navbar-brand {
+  padding: 3px;
+    img {
+        height: 60px;
+        margin-left: 0;
+    }
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: $btn-success-background-color;
+}
+
+.navbar-nav {
+  height: 80px;
+
+  li a {
+    padding: 30px;
+  }
+}
+
+.fa-stack {
+  line-height: 0 !important;
+}
+
+#you-org {
+    margin-top: 0px;
+}
+
+.bajada {
+    // Text
+    color: #6B6D80;
+    // Layout
+    margin-top: 10px;
+}
+
+.btn-blue {
+    background-color: #F8AE42;
+    color: white;
+}
+
+
+.btn-apoyo {
+  background-color: #EB665F !important;
+  cursor: pointer; }
+
+.btn-apoyo:hover {
+  background-color: lighten(#EB665F, 20%) !important; }
+
+#footer .logo-red {
+  img {
+    opacity: 1 !important;
+    height: 75px;
+    display: inline;
+  }
+}
+
+body {
+  color: #6B6D80;
+}
+
+.label-default {
+  background-color: #EB665F;
+}
+
+.container-fluid.filter {
+  padding: 30px 0 30px;
+}
+
+.proposals_count {
+  margin-bottom: 30px;
+}
+
+.btn-login {
+    height: 30px;
+    margin: 25px;
+    padding: 5px 15px !important;
+    border-radius: 5px;
+}
+
+.fa.fa-circle.fa-stack-2x {
+  color: white !important;
+  margin: -19px 0;
+}
+
+.fa.fa-twitter.fa-stack-1x.fa-inverse, .fa.fa-facebook.fa-stack-1x.fa-inverse {
+  color: #EB665F !important;
+}
+
+textarea::placeholder, input[type="text"]::placeholder {
+  color: #6B6D80 !important;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFFFFF;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-transform: none;
+}
