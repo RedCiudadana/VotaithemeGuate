@@ -24,7 +24,15 @@ h1, h2, h3, h4, h5, h6, .badge, label.control-label {
 }
 
 .navbar {
-  height: 80px;
+  min-height: 80px;
+}
+
+.navbar-toggle {
+  margin-top: 20px;
+}
+
+.navbar-header {
+  min-height: 80px;
 }
 
 .navbar-brand {
@@ -40,10 +48,11 @@ h1, h2, h3, h4, h5, h6, .badge, label.control-label {
 }
 
 .navbar-nav {
-  height: 80px;
+  min-height: 80px;
 
   li a {
-    padding: 30px;
+    padding-top: 30px;
+    padding-left: 20px;
   }
 }
 
@@ -138,4 +147,36 @@ select.form-control, .form-group .control-label input {
   text-transform: none;
   letter-spacing: normal;
   text-transform: none;
+}
+
+// Footer
+
+.un-proyecto-de {
+  display: block;
+  text-align: center;
+}
+
+@media (min-width: 768px) { 
+  .un-proyecto-de {
+    display: inline-flex;
+    text-align: left;
+
+    .small {
+      width: 40%;
+    }
+
+    .logos {
+      width: 60%;
+    }
+  }
+ }
+
+.redes {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .redes {
+    text-align: right;
+  }
 }
