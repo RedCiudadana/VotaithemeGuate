@@ -13,7 +13,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/" onclick="ga('send', 'event', 'nav-logo-vota', 'click')"><img src="{% static 'img/logo.svg' %}{% block navbar_logo %}{% endblock navbar_logo %}" class="img-responsive" title="Vota Inteligente" alt="Vota Inteligente"></a>
+            <a class="navbar-brand" href="/" onclick="ga('send', 'event', 'nav-logo-vota', 'click')"><img src="{% static 'img/logo.png' %}{% block navbar_logo %}{% endblock navbar_logo %}" class="img-responsive" title="Vota Inteligente" alt="Vota Inteligente"></a>
         </div>
         {% block navbar %}
         {% block extra_nav %}
@@ -24,6 +24,7 @@
               <li><a href="{% url 'que_es' %}" onclick="ga('send', 'event', 'nav-que-es', 'click')">{% trans "¿Qué es?" %}</a></li>
                 <li><a href="{% url 'popular_proposals:home' %}" onclick="ga('send', 'event', 'nav-conoce-propuestas', 'click')">{% trans "Propuestas ciudadanas" %}</a></li>
                 <li><a href="/" onclick="ga('send', 'event', 'nav-compromisos-pinera', 'click')">{% trans "Compromisos" %}</a></li>
+                <li><a href="{% url 'username_and_password' %}" class="btn btn-blue btn-login" onclick="ga('send', 'event', 'click')">{% trans "Ingresa" %}</a></li>
                 <li>
                     <a href="#" onclick="ga('send', 'event', 'nav-twitter-share', 'click'); window.open(&quot;//twitter.com/share?via=Ciudadanoi&hashtags={{ config.WEBSITE_TWITTER_HASHTAG }}&text={{ config.WEBSITE_TWITTER_TEXT }}&quot;,&quot;twitter&quot;,&quot;width=450, height=250&quot;)">
                       <span class="fa-stack fa-lg">

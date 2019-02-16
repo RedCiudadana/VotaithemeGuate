@@ -3208,3 +3208,14 @@ img.img-responsive.img-circle.no-gano-na {
     display: none; }
   .llamado {
     display: none; } }
+
+/*RED CIUDADANA THEME*/
+
+.navbar-inverse {
+  border-bottom: 0;
+}
+
+/*Dont uppercase*/
+h1, h2, h3, h4, h5, h6, .badge {
+  text-transform: none !important;
+}
