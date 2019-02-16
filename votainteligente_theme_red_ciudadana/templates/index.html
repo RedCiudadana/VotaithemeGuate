@@ -9,7 +9,7 @@
 {% block everything %}
 <img src="{% static 'img/slider-lg.png' %}" alt="Estas elecciones, ¡la ciudadanía propone!" width="100%" class="hidden-sm visible-md visible-lg">
 <img src="{% static 'img/slider-xs.png' %}" alt="Estas elecciones, ¡la ciudadanía propone!" width="100%" class="visible-xs visible-sm hidden-md hidden-lg">
-
+{% if featured_proposals.count %}
 <section id="highlighted-proposals">
   <div class="container">
     <h3 class="text-center">Tenemos <a href="{% url 'popular_proposals:home' %}" onclick="ga('send', 'event', 'counter-propuestas-ciudadanas', 'click')"><span class="counter-number">{{total_proposals}}</span></a> propuestas ciudadanas</h3>
@@ -21,7 +21,7 @@
     </div>
   </div>
 </section>
-
+{% endif %}
 {% cache 600 organization_logos %}
 {% organization_logos %}
 {% endcache %}
