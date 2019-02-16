@@ -9,6 +9,19 @@
 {% block everything %}
 <img src="{% static 'img/slider-lg.png' %}" alt="Estas elecciones, ¡la ciudadanía propone!" width="100%" class="hidden-sm visible-md visible-lg">
 <img src="{% static 'img/slider-xs.png' %}" alt="Estas elecciones, ¡la ciudadanía propone!" width="100%" class="visible-xs visible-sm hidden-md hidden-lg">
+
+<section id="highlighted-proposals">
+  <div class="container">
+    <h3 class="text-center">Tenemos <a href="{% url 'popular_proposals:home' %}" onclick="ga('send', 'event', 'counter-propuestas-ciudadanas', 'click')"><span class="counter-number">{{total_proposals}}</span></a> propuestas ciudadanas</h3>
+    <p class="bajada text-center">Te invitamos a filtrar y encontrar propuestas ciudadanas en las siguientes áreas</p>
+    {% include 'popular_proposal/_filter_tag_form.html' %}
+    {% include 'popular_proposal/_lista_propuestas.html' with popular_proposals=featured_proposals form=Nil hide_proposal_list_header=True hidden_search=True %}
+    <div class="col-md-6 col-md-offset-3">
+      <p class="text-center"><a href="{% url 'popular_proposals:home' %}" class="btn btn-success">Ver todas las propuestas</a></p>
+    </div>
+  </div>
+</section>
+
 {% cache 600 organization_logos %}
 {% organization_logos %}
 {% endcache %}
