@@ -1,1 +1,1 @@
-[VotaInteligente] Confirmación de mensaje {{message.subject}}
+[Nuestra Elección] Confirmación de cuenta {{message.subject}}

@@ -3,18 +3,18 @@ from django import forms
 
 
 class PersonalDataForm(forms.Form):
-    lema = forms.CharField(label=u'Slogan da campanha', required=False, initial='')
-    ocupacion = forms.CharField(label=u'Ocupação atual', required=False, initial='')
-    raca = forms.CharField(label=u'Raça', required=False, initial='')
-    orietacion_sexual = forms.CharField(label=u'Orientação sexual', required=False, initial='')
-    territorio = forms.CharField(label=u'Território', required=False, initial='')
-    experiencia = forms.CharField(label=u'Bio',
+    age = forms.IntegerField(label='Edad', required=False, initial=0)
+    lema = forms.CharField(label=u'Lema de campaña', required=False, initial='')
+    partido = forms.CharField(label=u'Partido', required=False, initial='')
+    pacto = forms.CharField(label=u'Pacto', required=False, initial='')
+    ocupacion = forms.CharField(label=u'Ocupación', required=False, initial='')
+    experiencia = forms.CharField(label=u'Reseña Biográfica',
                                   widget=forms.Textarea(),
                                   max_length=4096,
                                   required=False,
                                   initial=''
                                   )
-    telefono = forms.CharField(label=u'Número de telefone',
+    telefono = forms.CharField(label=u'Teléfono',
                                required=False,
                                initial='',
-                               help_text=u"Existe um telefone onde os cidadãos interessados na sua campanha podem se comunicar com você?")
+                               help_text=u"¿Hay algún teléfono donde los ciudadanos interesados en tu campaña se puedan comunicar con tu comando?")
