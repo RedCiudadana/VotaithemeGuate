@@ -41,7 +41,7 @@ $('[data-toggle="tooltip"]').tooltip();
       {% endblocktrans %} {% if not tipo_propuestas %}{% trans "propuestas ciudadanas" %}{% else %}{{tipo_propuestas}}{% endif %}</h3>
       {% endif %}
       {% if not user|is_candidate and not hidden_create_proposal_button %}
-        {% url 'popular_proposals:propose_wizard_full_without_area' as create_proposal_url %}
+        {% url 'popular_proposals:propose_wizard_full' as create_proposal_url %}
         <div class="text-center"><a href="{{create_proposal_url}}" class="btn btn-dark">{% trans "Crear nueva propuesta" %}</a></div>
       {% endif %}
       {% if user.is_authenticated and form.is_filled_search and config.SEARCH_SUBSCRIPTION_ENABLED %}
@@ -65,7 +65,7 @@ $('[data-toggle="tooltip"]').tooltip();
     {% for proposal in popular_proposals %}
         {% display_proposal_card proposal %}
       {% empty %}
-      {% url 'popular_proposals:propose_wizard_full_without_area' as create_proposal_url %}
+      {% url 'popular_proposals:propose_wizard_full' as create_proposal_url %}
         <p class="bg-info text-center">
           {% trans "Aún no se han generado propuestas para esta búsqueda." %}
         </p>
