@@ -5,11 +5,11 @@
 {% if user.get_full_name %}
 
   {% blocktrans with user=user.get_full_name area=area %}
-    {{user}} ha creado una propuesta para mejorar {{ area }} en Vota Inteligente 2017.
+    {{user}} ha creado una propuesta para mejorar {{ area }} en NuestraElección 2019.
   {% endblocktrans %}
 {% else %}
   {% blocktrans with user=user area=area %}
-    {{user}} ha creado una propuesta para mejorar {{ area }} en Vota Inteligente 2017.
+    {{user}} ha creado una propuesta para mejorar {{ area }} en NuestraElección 2019.
   {% endblocktrans %}
 {% endif %}
 </p>
