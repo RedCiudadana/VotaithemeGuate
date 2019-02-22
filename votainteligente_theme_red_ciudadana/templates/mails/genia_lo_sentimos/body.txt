@@ -6,7 +6,7 @@ Puedes revisar sus razones para rechazar tu propuesta ciudadana acá:
 https://votainteligente.cl{{commitment.get_absolute_url}}
 {% endif %}
 
-Te estimamos mucho y por lo mismo te queremos pedir que no te desanimes y que nos ayudes a seguir cambiando Chile.
+Te estimamos mucho y por lo mismo te queremos pedir que no te desanimes y que nos ayudes a seguir cambiando Guatemala.
 Puedes seguir impulsando tu propuesta, para lo cual te puedes apoyar en las Herramientas de Activismo:
 
 https://votainteligente.cl/static/material-ciudadano/manual-herramientas-activismo.pdf
