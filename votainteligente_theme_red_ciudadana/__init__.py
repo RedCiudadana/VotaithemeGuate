@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Top-level package for Votainteligente Theme Red Ciudadana."""
+"""Top-level package for NuestraEleccion Theme Red Ciudadana."""
 
 __author__ = """Red Ciudadana"""
 __email__ = 'dev@redciudadana.org.gt'
