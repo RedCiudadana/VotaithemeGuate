@@ -24,5 +24,5 @@ Para comprometerte con éstas y otras propuestas debes ingresar a https://{{site
 {% endwith %}
 Si quieres que utilicemos otra dirección de correo electrónico para comunicarnos contigo, o si tienes alguna duda, puedes responder a este mismo mail.
 
-¡Súmate a VotaInteligente!
+¡Súmate a NuestraElección!
 {% mail_signature_txt %}

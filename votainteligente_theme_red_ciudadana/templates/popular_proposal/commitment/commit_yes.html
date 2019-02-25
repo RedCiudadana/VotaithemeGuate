@@ -11,7 +11,7 @@
 {% block content %}
 <div class="container">
   <ul class="breadcrumb">
-    <li><a href="{% url 'home' %}">{% trans "VotaInteligente" %}</a></li>
+    <li><a href="{% url 'home' %}">{% trans "NuestraElección" %}</a></li>
     <li><a href="{% url 'popular_proposals:home' %}">{% trans "Propuestas" %}</a></li>
     <li><a href="{{proposal.get_absolute_url}}">{{proposal.title}}</a></li>
     <li class="active">{% trans "Firmar compromiso" %}</li>

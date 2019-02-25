@@ -15,8 +15,8 @@ La ciudadanía está esperando que se pronuncie sobre esta propuesta ciudadana.
 
 {% if url %}
 Puedes revisar más detalles y definir tu postura en el siguiente link:
-http://votainteligente.cl{{url}}
+http://nuestraeleccion.gt{{url}}
 {% endif %}
 
 Desde ya muchas gracias,
-El equipo de VotaInteligente a nombre de {{popular_proposal.proposer}}.
+El equipo de NuestraElección a nombre de {{popular_proposal.proposer}}.

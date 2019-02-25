@@ -38,7 +38,7 @@
           </thead>
           <tbody>
           {% with object.twitter|extract_twitter_username_without_at as twitter_org %}
-          {% with url="https://votainteligente.cl"|add:object.get_absolute_url %}
+          {% with url="https://nuestraeleccion.gt"|add:object.get_absolute_url %}
           {% for candidate in candidates.all %}
             {% if candidate.election.position == 'Presidenta o Presidente' %}
             <tr>
@@ -75,7 +75,7 @@
           </thead>
           <tbody>
           {% with object.twitter|extract_twitter_username_without_at as twitter_org %}
-          {% with url="https://votainteligente.cl"|add:object.get_absolute_url %}
+          {% with url="https://nuestraeleccion.gt"|add:object.get_absolute_url %}
           {% for candidate in candidates.all %}
             {% if candidate.election.position == 'Senadora o Senador' %}
             <tr>
@@ -112,7 +112,7 @@
           </thead>
           <tbody>
           {% with object.twitter|extract_twitter_username_without_at as twitter_org %}
-          {% with url="https://votainteligente.cl"|add:object.get_absolute_url %}
+          {% with url="https://nuestraeleccion.gt"|add:object.get_absolute_url %}
           {% for candidate in candidates.all %}
             {% if candidate.election.position == 'Diputada o Diputado' %}
             <tr>

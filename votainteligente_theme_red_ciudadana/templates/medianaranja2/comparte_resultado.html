@@ -10,7 +10,7 @@
 {% endblocktrans %}{% endblock title %}
 
 {% block ogp %}
-  <meta property="og:title" content="{% blocktrans %}Media Naranja Política en VotaInteligente{% endblocktrans %}">
+  <meta property="og:title" content="{% blocktrans %}Media Naranja Política en NuestraElección{% endblocktrans %}">
   <meta property="og:type" content="{{ config.WEBSITE_OGP_TYPE }}">
   <meta property="og:url" content="https://{% url_domain %}{{object.get_absolute_url}}">
   <meta property="og:image" content="https:{{object.ogp_image }}">
@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@ciudadanoi">
   <meta name="twitter:creator" content="{{object.object.twitter }}">
-  <meta name="twitter:title" content="{% blocktrans %}Media Naranja Política en VotaInteligente{% endblocktrans %}">
+  <meta name="twitter:title" content="{% blocktrans %}Media Naranja Política en NuestraElección{% endblocktrans %}">
   <meta name="twitter:description" content="{% blocktrans with name=object.object.get_name %}Mi Media Naranja Política es {{name}}{% endblocktrans %}">
   <meta name="twitter:image" content="https:{{object.ogp_image }}">
 

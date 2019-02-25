@@ -10,7 +10,7 @@
 
 {% block ogp %}
   {% render_ogp popular_proposal %}
-  <meta property="og:title" content="{% trans 'En votainteligente.cl revisa el compromiso que he firmado' %}">
+  <meta property="og:title" content="{% trans 'En nuestraeleccion.gt revisa el compromiso que he firmado' %}">
   <meta property="og:type" content="{{ config.WEBSITE_OGP_TYPE }}">
   <meta property="og:url" content="https://{% url_domain %}{% url 'popular_proposals:commitment' commitment.candidate.id commitment.proposal.slug %}">
   <meta property="og:image" content="{{commitment.proposal.ogp_image}}">
@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@ciudadanoi">
   <meta name="twitter:creator" content="@ciudadanoi">
-  <meta name="twitter:title" content="{% trans 'En votainteligente.cl revisa el compromiso que he firmado!' %}">
+  <meta name="twitter:title" content="{% trans 'En nuestraeleccion.gt revisa el compromiso que he firmado!' %}">
   <meta name="twitter:description" content="{% blocktrans with candidate_name=commitment.candidate.name proposal=commitment.proposal.title %}Yo, {{candidate_name}}, me he comprometido con la Propuesta Ciudadana: {{proposal}}{% endblocktrans %}">
   <meta name="twitter:image" content="{{commitment.proposal.ogp_image}}">
 {% endblock ogp %}

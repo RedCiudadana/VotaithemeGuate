@@ -9,6 +9,6 @@ junto con comprometerse con tu causa:
 
 Para ver la propuesta ciudadana puedes acceder a la siguiente url:
 
-https://votainteligente.cl{{commitment.get_absolute_url}}
+https://nuestraeleccion.gt{{commitment.get_absolute_url}}
 
 {% mail_signature_txt %}

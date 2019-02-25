@@ -12,7 +12,7 @@
 {% block content %}
 <div class="container">
   <ol class="breadcrumb">
-    <li><a href="{% url 'home' %}">{% trans "VotaInteligente" %}</a></li>
+    <li><a href="{% url 'home' %}">{% trans "NuestraElección" %}</a></li>
     {% if commitment.proposal.area %}
       <li><a href="{{commitment.proposal.area.get_absolute_url}}">{{commitment.proposal.area}}</a></li>
     {% endif %}

@@ -12,7 +12,7 @@
     {% endfor %}
 </ul>
 {% else %}
-  <p id="agenda-candidato">{% trans "Este candidato no cuenta con una agenda de actividades en VotaInteligente" %}</p>
+  <p id="agenda-candidato">{% trans "Este candidato no cuenta con una agenda de actividades en NuestraElección" %}</p>
 {% endif %}
 {% if user|manages_this:candidate %}
   <a href="{% url 'backend_candidate:add_activity' slug=candidate.slug %}" class="btn btn-white"><i class="fa fa-plus"></i> {% trans "Agrega tus actividades" %}</a>

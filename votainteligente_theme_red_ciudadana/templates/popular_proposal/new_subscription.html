@@ -8,7 +8,7 @@
 {% else %}
 {% blocktrans with proposal=proposal.title %}
 ¿Deseas apoyar la propuesta <b>{{proposal}}</b>?
-<p>Al apoyar esta propuesta aceptas que VotaInteligente te notifique vía correo electrónico cuando un candidato decida apoyar esta propuesta.</p>
+<p>Al apoyar esta propuesta aceptas que NuestraElección te notifique vía correo electrónico cuando un candidato decida apoyar esta propuesta.</p>
 {% endblocktrans %}
 
 <form method="POST" action="{% url 'popular_proposals:like_a_proposal' pk=proposal.id %}" role="form">

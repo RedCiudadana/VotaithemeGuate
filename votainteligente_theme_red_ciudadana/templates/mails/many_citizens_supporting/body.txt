@@ -5,7 +5,7 @@ Te queremos contar que en {{proposal.area}} la propuesta “{{proposal.title}}�
 Para hacerlo debes hacer click en el siguiente link y podrás además hacer comentarios sobre
 cómo te comprometerás.
 
-https://votainteligente.cl{{proposal.get_absolute_url}}
+https://nuestraeleccion.gt{{proposal.get_absolute_url}}
 
 Saludos
 
