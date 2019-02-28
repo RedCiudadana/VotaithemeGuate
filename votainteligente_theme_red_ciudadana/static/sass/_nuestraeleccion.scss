@@ -183,8 +183,36 @@ select.form-control, .form-group .control-label input {
 
 .bg-1 {
   background-color: #EB665F;
+  color: white;
+
+  h2 {
+    text-transform: uppercase !important;
+    color: white;
+    font-weight: 900;
+    font-size: 16px;
+    font-family: 'Arvo', serif; 
+  }
+
+  p {
+    text-align: center;
+    margin: 10px;
+  }
 }
 
 .bg-2 {
   background-color: #F8AE42;
+  color: white;
+
+  h2 {
+    text-transform: uppercase !important;
+    color: white;
+    font-weight: 900;
+    font-size: 16px;
+    font-family: 'Arvo', serif;
+  }
+  
+  p {
+    text-align: center;
+    margin: 10px;
+  }
 }
