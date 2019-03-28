@@ -24,7 +24,12 @@
               <li><a href="{% url 'que_es' %}" onclick="ga('send', 'event', 'nav-que-es', 'click')">{% trans "¿Qué es?" %}</a></li>
                 <li><a href="{% url 'popular_proposals:home' %}" onclick="ga('send', 'event', 'nav-conoce-propuestas', 'click')">{% trans "Propuestas ciudadanas" %}</a></li>
                 <li><a href="{% url 'material_ciudadano' %}" onclick="ga('send', 'event', 'nav-compromisos-pinera', 'click')">{% trans "Elecciones 2019" %}</a></li>
-                <li><a href="{% url 'username_and_password' %}" class="btn btn-blue btn-login" onclick="ga('send', 'event', 'click')">{% trans "Ingresa" %}</a></li>
+                {% if user.is_authenticated %}
+                  <li><a href="{% url 'auth_logout' %}" class="btn btn-blue btn-login" onclick="ga('send', 'event', 'click')">{% trans "Salir de sesión" %}</a></li>
+                {% else %}
+                  <li><a href="{% url 'username_and_password' %}" class="btn btn-blue btn-login" onclick="ga('send', 'event', 'click')">{% trans "Ingresa" %}</a></li>
+                {% endif %}
+                  
                 <li>
                     <a href="#" onclick="ga('send', 'event', 'nav-twitter-share', 'click'); window.open(&quot;//twitter.com/share?via=RedxGuate&hashtags={{ config.WEBSITE_TWITTER_HASHTAG }}&text={{ config.WEBSITE_TWITTER_TEXT }}&quot;,&quot;twitter&quot;,&quot;width=450, height=250&quot;)">
                       <span class="fa-stack fa-lg">
