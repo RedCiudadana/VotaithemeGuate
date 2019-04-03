@@ -57,5 +57,5 @@
   </ul>
 </li>
 {% else %}
-<li><a href="{% if login_url %}{{login_url}}{% else %}{% url 'auth_login' %}{% endif %}" onclick="ga('send', 'event', 'nav-login', 'click')">{% blocktrans %}Ingresar{% endblocktrans %}</a></li>
+<li><a class="btn btn-blue btn-login" href="{% if login_url %}{{login_url}}{% else %}{% url 'auth_login' %}{% endif %}" onclick="ga('send', 'event', 'nav-login', 'click')">{% blocktrans %}Ingresar{% endblocktrans %}</a></li>
 {% endif %}
