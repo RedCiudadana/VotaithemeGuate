@@ -16,8 +16,9 @@
     {% endif %}
     {% if user.is_staff %}
     <li><a href="{% url 'backend_staff:index' %}"><i class="fa fa-heart" aria-hidden="true"></i>{% blocktrans %}Sección del Staff{% endblocktrans %}</a></li>
+    <!-- error 505, deshabilitadas hasta conocer cómo funcionan
     <li><a href="{% url 'backend_staff:stats' %}"><i class="fa fa-line-chart" aria-hidden="true"></i>{% blocktrans %}Estadísticas{% endblocktrans %}</a></li>
-    <li><a href="{% url 'backend_staff:per_area_stats' %}"><i class="fa fa-bar-chart" aria-hidden="true"></i>{% blocktrans %}Estadísticas por area{% endblocktrans %}</a></li>
+    <li><a href="{% url 'backend_staff:per_area_stats' %}"><i class="fa fa-bar-chart" aria-hidden="true"></i>{% blocktrans %}Estadísticas por area{% endblocktrans %}</a></li> -->
     {% endif %}
 
     {% if user|is_candidate %}
