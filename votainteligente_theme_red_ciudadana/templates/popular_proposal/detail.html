@@ -146,7 +146,11 @@ $(function(){
             {% if popular_proposal.document|length %}
             <h3>{% trans "Documentos" %}</h3>
             <ul class="list-unstyled">
-              <li><a href="{{popular_proposal.document.url}}" target="_blank"><i class="fa fa-file"></i> {% trans "Documento" %}</a></li>
+              <li>
+                <a href="{{popular_proposal.document.url}}" target="_blank" class="btn btn-success">
+                  <i class="text-white fa fa-file"></i> {% trans "Documento" %}
+                </a>
+              </li>
             </ul>
             {% endif %}
 
