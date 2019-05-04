@@ -244,12 +244,30 @@ select.form-control, .form-group .control-label input {
 }
 
 .elecciones2019 span {
-    display: block;
-    font-size: 0.8rem;
-    text-align: center;
-    color: white;
-  }
+  display: block;
+  font-size: 0.8rem;
+  text-align: center;
+  color: white;
+}
 
-  .elecciones2019:hover span {
-    color: #F8AE42;
+.elecciones2019:hover span {
+  color: #F8AE42;
+}
+
+.gallery {
+  text-align: center;
+}
+
+.gallery > div {
+  float: unset;
+}
+
+.material.videos {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .material.videos h3 {
+    text-align: left;
   }
+}
