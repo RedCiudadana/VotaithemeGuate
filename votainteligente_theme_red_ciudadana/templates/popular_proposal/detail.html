@@ -135,15 +135,18 @@ $(function(){
         {{popular_proposal.detail_as_html}}
         <!-- fin detalle propuesta -->
 
-        {% if popular_proposal.background %}
         <!-- antecedentes -->
-        <div class="col-md-12 antecedentes light-text print_hidden">
+        <div class="col-md-12 antecedentes print_hidden" id="proposal-details">
+          {% if popular_proposal.background %}
+            <div class="row">
+              <h3>{% trans 'Antecedentes' %}</h3>
+
+              <p>{{popular_proposal.background|linebreaksbr}}</p>
+
+            </div>
+          {% endif %}
+          {% if popular_proposal.document|length %}
           <div class="row">
-            <h3>{% trans 'Antecedentes' %}</h3>
-
-            <p>{{popular_proposal.background|linebreaksbr}}</p>
-
-            {% if popular_proposal.document|length %}
             <h3>{% trans "Documentos" %}</h3>
             <ul class="list-unstyled">
               <li>
@@ -152,15 +155,16 @@ $(function(){
                 </a>
               </li>
             </ul>
-            {% endif %}
-
-            {% if popular_proposal.image|length %}
-            <img src="{{popular_proposal.image.url}}" class="img-responsive">
-            {% endif %}
           </div>
+          {% endif %}
+          
+          {% if popular_proposal.image|length %}
+          <div class="row">
+            <img src="{{popular_proposal.image.url}}" class="img-responsive">
+          </div>
+          {% endif %}
         </div>
         <!-- fin antecedentes -->
-        {% endif %}
 
         <p class="llamado">
           {% trans "Si te gustó ¡apóyala y compártela! Así todos/as tendremos voz en las elecciones de este año." %}
