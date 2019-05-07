@@ -1,9 +1,9 @@
 {% load votainteligente_extras %}
 Hola
 
-Te escribimos en tu calidad de jefe de campaña de {{contact.candidate.name}}, para invitarlos a participar de http://Nuestraeleccion.gt, plataforma que busca acercar a candidatas/os con la ciudadanía en estas próximas elecciones.
+Te escribimos, para invitarlo a participar de http://nuestraeleccion.gt, plataforma que busca acercar a candidatas/os con la ciudadanía en estas próximas elecciones.
 
-http://Nuestraeleccion.gt es una plataforma, SIN COSTO ASOCIADO, que recibe propuestas ciudadanas y de la sociedad civil en el marco de las elecciones presidenciales y parlamentarias de este año.
+http://Nuestraeleccion.gt es una plataforma, SIN COSTO ASOCIADO, que recibe propuestas ciudadanas y de la sociedad civil en el marco de las elecciones generales de este año.
 
 Cada candidatura cuenta con un perfil básico, al que puede acceder para difundir información sobre su campaña y comprometerse con aquellas propuestas ciudadanas que le sean afines.
 
