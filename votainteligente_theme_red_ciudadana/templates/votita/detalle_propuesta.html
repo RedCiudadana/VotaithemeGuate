@@ -27,16 +27,16 @@ $(function(){
   <meta property="og:title" content="Levanta La Mano">
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://levantalamano.cl{{ proposal.get_absolute_url }}">
-  <meta property="og:image" content="{{proposal.ogp_image}}">
+  <meta property="og:image" content="https://{% url_domain %}{% static 'img/logo_vi_og.png' %}">
   <meta property="og:description" content="{{proposal.data.solution}}">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@ciudadanoi">
+  <meta name="twitter:site" content="@RedXGuate">
   <meta name="twitter:creator" content="{% spaceless %}
   {% if proposal.proposer.profile.is_organization and proposal.proposer.organization_template.twitter %}
     {{proposal.proposer.organization_template.twitter|extract_twitter_username}}
   {% else %}
-    @ciudadanoi
+    @RedXGuate
   {% endif %}
   {% endspaceless %}">
   <meta name="twitter:title" content="¡Ingresa a nuestraeleccion.gt y apoya esta propuesta!">
@@ -47,7 +47,7 @@ $(function(){
   {{ proposal.title }}
   {% endif %}
   {% endspaceless %}">
-  <meta name="twitter:image" content="{{proposal.ogp_image}}">
+  <meta name="twitter:image" content="https://{% url_domain %}{% static 'img/logo_vi_og.png' %}">
 {% endblock ogp %}
 
 {% block content %}
