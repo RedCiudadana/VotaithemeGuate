@@ -4,9 +4,9 @@
 {% load i18n %}
 {% load thumbnail %}
 {% load bootstrap3 %}
+
 {% block extrajs %}
 {% load ogp_tags %}
-
 
 $(function(){
     $('.loadFromUrl').on('show.bs.modal', function (event) {
@@ -17,6 +17,7 @@ $(function(){
     })
     $('[data-toggle="tooltip"]').tooltip();
 });
+
 {% endblock extrajs %}
 
 {% block title %}- {% trans "Propuesta" %} - {{popular_proposal.title}}{% endblock title%}
@@ -24,9 +25,10 @@ $(function(){
 {% block ogp %}
   {% render_ogp popular_proposal %}
   <meta property="og:description" content="{{ popular_proposal.data.solution_at_the_end }}">
+  <meta property="og:image" content="https://{% url_domain %}{% static 'img/logo_vi_og.png' %}">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@ciudadanoi">
+  <meta name="twitter:site" content="@RedXGuate">
   <meta name="twitter:creator" content="{% spaceless %}
   {% if popular_proposal.proposer.profile.is_organization and popular_proposal.proposer.organization_template.twitter %}
     {{popular_proposal.proposer.organization_template.twitter|extract_twitter_username}}
@@ -42,7 +44,8 @@ $(function(){
   {{ popular_proposal.title }}
   {% endif %}
   {% endspaceless %}">
-  <meta name="twitter:image" content="{{popular_proposal.ogp_image}}">
+
+  <meta name="twitter:image" content="https://{% url_domain %}{% static 'img/logo_vi_og.png' %}">
 {% endblock ogp %}
 
 {% block everything %}
