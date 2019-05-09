@@ -33,15 +33,15 @@ $(function(){
   {% if popular_proposal.proposer.profile.is_organization and popular_proposal.proposer.organization_template.twitter %}
     {{popular_proposal.proposer.organization_template.twitter|extract_twitter_username}}
   {% else %}
-    @ciudadanoi
+    @RedXGuate
   {% endif %}
   {% endspaceless %}">
   <meta name="twitter:title" content="{% trans "¡Ingresa a nuestraeleccion.gt y apoya esta propuesta!" %}">
   <meta name="twitter:description" content="{% spaceless %}
   {% if popular_proposal.proposer.profile.is_organization and popular_proposal.proposer.organization_template.twitter %}
-  {% blocktrans with proposer_twitter=popular_proposal.proposer.organization_template.twitter|extract_twitter_username proposal=popular_proposal.title %}{{proposer_twitter}} propone {{ proposal }}{% endblocktrans %}
+    {% blocktrans with proposer_twitter=popular_proposal.proposer.organization_template.twitter|extract_twitter_username proposal=popular_proposal.title %}{{proposer_twitter}} propone {{ proposal }}{% endblocktrans %}
   {% else %}
-  {{ popular_proposal.title }}
+    {{ popular_proposal.title }}
   {% endif %}
   {% endspaceless %}">
 
