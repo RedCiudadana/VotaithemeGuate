@@ -31,7 +31,7 @@
     {% trans "También te podría interesar:" %}
         {% for area in candidate.election.area.get_related %}
           {% if area.elections.count %}
-          <span class="label label-primary"><a href="{{area.get_absolute_url}}">{{area.name}}</a></span>
+          <span class="badge"><a href="{{area.get_absolute_url}}" class="text-white">{{area.name}}</a></span>
           {% endif %}
         {% endfor %}
     {% endif %}
