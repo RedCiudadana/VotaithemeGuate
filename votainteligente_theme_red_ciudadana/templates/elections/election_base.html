@@ -27,14 +27,14 @@
       {% endif %}
       <li class="active">{{candidate.name}}</li>
     </ol>
-    {% if candidate.election.area.get_related %}
+    <!-- {% if candidate.election.area.get_related %}
     {% trans "También te podría interesar:" %}
         {% for area in candidate.election.area.get_related %}
           {% if area.elections.count %}
           <span class="badge"><a href="{{area.get_absolute_url}}" class="text-white">{{area.name}}</a></span>
           {% endif %}
         {% endfor %}
-    {% endif %}
+    {% endif %} -->
   </div>
 
   {% block mainelection %}
