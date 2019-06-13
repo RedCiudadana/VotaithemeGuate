@@ -5,7 +5,7 @@
 {% load cache %}
 
 {% block entire_navbar %}
-<div class="navbar navbar-inverse {% if fixed_nav_class %}{{fixed_nav_class}}{% else %}navbar-fixed-top{% endif %} {% block navbar_background %} white {% endblock navbar_background %}">
+<div class="navbar navbar-inverse {% if fixed_nav_class %}{{fixed_nav_class}}{% else %}navbar-fixed-top{% endif %} {% block navbar_background %} white {% endblock navbar_background %}" id="navbar">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -18,7 +18,11 @@
         {% block navbar %}
         {% block extra_nav %}
         {% endblock extra_nav %}
-
+        <style>
+          .navbar-nav li a {
+            text-align: center !important;
+          }
+        </style>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="{% url 'que_es' %}" onclick="ga('send', 'event', 'nav-que-es', 'click')">{% trans "¿Qué es?" %}</a></li>
@@ -38,7 +42,8 @@
                 </li>
                 <li>
                   <a href="{% url 'know_your_candidates' %}" onclick="ga('send', 'event', 'nav-conoce-propuestas', 'click')">
-                    {% trans "Candidaturas comprometidas" %}
+                    Candidaturas<br>
+                    comprometidas
                   </a>
                 </li>
                 {% include '_dropdown_user.html' %}
