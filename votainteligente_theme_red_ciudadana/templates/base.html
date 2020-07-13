@@ -49,6 +49,9 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/chosen/1.6.2/chosen.css" rel="stylesheet">
     <link href="{% sass_src 'sass/main.scss' %}" rel="stylesheet" type="text/css" />
 
+    <!-- THEME  -->
+    <link href="{% sass_src 'sass/_nuestraeleccion.scss' %}" rel="stylesheet" type="text/css" />
+
     <link href='//fonts.googleapis.com/css?family=Nunito+Sans:400,700' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
@@ -89,7 +92,7 @@
       </script>
       <div>
         {% block navbar %}
-        {% include '_navbar.html' %}
+            {% include '_navbar.html' %}
         {% endblock navbar %}
         {% block everything %}
         <div class="{% block content_container %}container content_padding{% endblock content_container %}">

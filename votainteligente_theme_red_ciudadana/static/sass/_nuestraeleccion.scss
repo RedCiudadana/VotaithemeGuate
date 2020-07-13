@@ -1,4 +1,5 @@
 // Nuestra Elección 2019
+@import 'colors';
 
 #proposalFilterForm {
   .control-label {
@@ -15,6 +16,10 @@
 
 .navbar-inverse {
   border-bottom: 0;
+}
+
+.navbar-inverse.white {
+    background-color: red !important;
 }
 
 /*Dont uppercase*/
@@ -157,7 +162,7 @@ select.form-control, .form-group .control-label input {
   text-align: center;
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
   .un-proyecto-de {
     display: inline-flex;
     text-align: left;
@@ -191,7 +196,7 @@ select.form-control, .form-group .control-label input {
     color: white;
     font-weight: 900;
     font-size: 16px;
-    font-family: 'Arvo', serif; 
+    font-family: 'Arvo', serif;
   }
 
   p {
@@ -211,7 +216,7 @@ select.form-control, .form-group .control-label input {
     font-size: 16px;
     font-family: 'Arvo', serif;
   }
-  
+
   p {
     text-align: center;
     margin: 10px;
